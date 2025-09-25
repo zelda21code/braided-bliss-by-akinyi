@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpg" alt="Website Logo" class="logo" />
+    <h1>Braided Bliss By Akinyi</h1>
+  </header>
+  <p class="description">Known for creativity and precision, we specialize in beautiful, lasting braids that celebrate culture and confidence. Your crown, braided to perfection.</p>
+
+
+  <section id="gallery">
+    <h2>Image Gallery</h2>
+    <div class="image-grid">
+      <img src="images/style3.jpg" alt="Image 1" />
+      <img src="images/style4.jpg" alt="Image 2" />
+      <img src="images/style5.jpg" alt="Image 3" />
+      <img src="images/style 6.jpg" alt="Image 1" />
+      <img src="images/style7.jpg" alt="Image 1" />
+    </div>
+  </section>
+
+  <section id="reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="review">
+    <p>"Amazing experience!" - Sarah</p>
+  </div>
+  <div class="review">
+    <p>"Would definitely come again." - Mike</p>
+  </div>
+
+  <!-- Live review form -->
+  <form id="review-form">
+    <h3>Leave a Review</h3>
+    <input type="text" id="reviewer-name" placeholder="Your Name" required />
+    <textarea id="review-text" placeholder="Your Review" required></textarea>
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <!-- Placeholder for new reviews -->
+  <div id="live-reviews"></div>
+</section>
+
+<form id="booking-form" action="https://formspree.io/f/xrbybpwd" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date" required />
+
+  <label for="service">Service:</label>
+  <select id="service" name="service">
+    <option value="consultation">Consultation</option>
+    <option value="appointment">Appointment</option>
+  </select>
+
+  <button type="submit">Book</button>
+</form>
+
+<div id="thank-you" style="display:none; color: green; margin-top: 10px;">
+  Thank you! Your booking has been received.
+</div>
+
+
+<script>
+  const form = document.getElementById("booking-form");
+  form.addEventListener("submit", function () {
+    setTimeout(() => {
+      alert("Thank you! Your booking has been received.");
+    }, 500);
+  });
+</script>
+
+</form>
+
+  </section>
+<section id="socials">
+  <h2>Connect with Us</h2>
+  <div class="social-links">
+    <a href="https://instagram.com/braidedbliss_byakinyi" target="_blank">Instagram</a>
+    <a href="https://facebook.com/Braided_Bliss" target="_blank">Facebook</a>
+    <a href="https://tiktok.com/@la_vie_est_belle911" target="_blank">TikTok</a>
+  </div>
+</section>
+
+  <footer>
+    <p>© 2025 Braided Bliss. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
